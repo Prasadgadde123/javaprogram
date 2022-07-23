@@ -1,0 +1,115 @@
+Java is a popular programming language, created in 1995.
+It is owned by Oracle and more than 3 billion devices run Java.
+It is used for
+->Mobile applications
+->Desktop applications
+->Web applications
+->Web servers and application servers
+->Games
+->Database connection
+
+->Java is purely an object oriented language due to the absence of global scope,
+ Everything in java is an object, all the program codes and data   within classes
+ and objects.
+class Demo{
+         int y=15;
+	public static void main(String args[]){
+		Demo obj=new Demo();
+		System.out.println(+obj.y);
+	}
+}
+principles of oop :
+1.Abstraction
+2.Encapsulation
+3.Inheritance
+4.Polymorphism
+1.Abstraction :
+	Abstraction aims to hide complexity from users and show them only relevant 
+information. For example, if you’re driving a car, you don’t need to know about 
+its internal workings
+
+abstract class Animal {
+  
+  public abstract void animalSound();
+  public void sleep() {
+    System.out.println("Zzz");
+  }
+}
+
+// Subclass (inherit from Animal)
+class Dog extends Animal {
+  public void animalSound() {
+    
+    System.out.println("The Dog says: Bow wow");
+  }
+}
+
+class Main {
+  public static void main(String[] args) {
+    Dog dg = new Dog();
+    dg.animalSound();
+    dg.sleep();
+  }
+}
+Encapsulation
+      The meaning of Encapsulation, is to make sure that "sensitive" data is hidden from users.
+      declare class variables as private
+
+Java Inheritance 
+In Java, it is possible to inherit attributes and methods from one class to another.
+ We group the "inheritance concept" into two categories:
+
+subclass (child) - the class that inherits from another class
+superclass (parent) - the class being inherited from
+
+
+class Vehicle {
+  protected String brand = "Ford";
+  public void honk() {
+    System.out.println("Tuut, tuut!");
+  }
+}
+
+class Car extends Vehicle {
+  private String modelName = "Mustang";
+  public static void main(String[] args) {
+    Car myFastCar = new Car();
+    myFastCar.honk();
+    System.out.println(myFastCar.brand + " " + myFastCar.modelName);
+  }
+}
+
+
+Java Polymorphism
+Polymorphism means "many forms", and it occurs when we have many classes that are related to
+ each other by inheritance.
+
+class Animal {
+  public void animalSound() {
+    System.out.println("The animal makes a sound");
+  }
+}
+
+class Pig extends Animal {
+  public void animalSound() {
+    System.out.println("The pig says: wee wee");
+  }
+}
+
+class Dog extends Animal {
+  public void animalSound() {
+    System.out.println("The dog says: bow wow");
+  }
+}
+
+class Main {
+  public static void main(String[] args) {
+    Animal myAnimal = new Animal();
+    Animal myPig = new Pig();
+    Animal myDog = new Dog();
+        
+    myAnimal.animalSound();
+    myPig.animalSound();
+    myDog.animalSound();
+  }
+}
